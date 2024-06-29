@@ -13,7 +13,7 @@ const collectEmployees = function () {
     if (firstName === null || firstName === "") {
       break;
     }
-
+//adding conditionals to break if null or empty
     let lastName = window.prompt("Enter last name:");
     if (lastName === null || lastName === "") {
       break;
@@ -23,7 +23,7 @@ const collectEmployees = function () {
     if (salary === null || salary === "") {
       break;
     }
-
+//unshift will add to the beginning of the array
     employees.unshift({ firstName, lastName, salary: parseFloat(salary) });
     continueEntry = window.confirm("Would you like to add another employee?");
   }
@@ -51,6 +51,9 @@ const displayAverageSalary = function (employeesArray) {
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+  //selects random from array
+  const randomEmployee = employeesArray[ Math.floor(Math.random() * employeesArray.length)];
+  console.log("Congratulations to " + randomEmployee.firstName + " " + randomEmployee.lastName + ", our random drawing winner!");
 };
 
 /*
